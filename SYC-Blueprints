@@ -1,0 +1,168 @@
+          					                       ________,                                       
+						                      [___o___()                                       
+		  					,____|_______ ___|__|_________.__                         _      
+                  					|_  [0]______`  __[]___[__]___|==|====[]o++++++++++++++==:_|       
+		  					| ||```     / /I] |:;| \|___.|/`                                    
+                   					 \_|       /_/    |__|       Y                                     
+                             `               		  |	   `		    / \                                                 
+                                            					  ./   \.                            
+								   
+								   ~Sniper Yagi Blueprints~
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+									{ RIGHT SIDE }
+
+
+									Scope for target lineup
+			                       Backend Wifi dongle   		    /
+							\			   /
+                                                         \                        /                        
+                                                          \                      /    	               2.4 GHz Yagi antenna 
+           					           \           ________,/   USB hub                    /       
+						            \         [___o___()   /                          /         
+		  					,____|_______ ___|__|_____/___.__                    /    _      
+                  					|_  [0]______`  ________{__}__|==|====[]o++++++++++++++==:_|       
+		  					| ||```     / /I] |:;| \|___.|/`                                    
+                   					 \_|       /_/ |  |__|       Y                                     
+                             `                Rear bipod- |	   `   |    |       / \   -------Bipod                                           
+                                            			      /     |     ./   \.     
+ 								     /      |
+ 	 							    /       |
+			                      Pressure switch trigger        External battery 
+
+                                           
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+									{ LEFT SIDE }
+                                                                                
+
+						        Side-Mounted phone size monitor
+								      \  	      Raspberry Pi computer
+           					                       \_______,    /                           2.4 GHz Yagi antenna       
+						                      [_\_____()   /                          /         
+		  					,____|_______ ___\__|_____/___.__                    /    _      
+                  					|_  _________`  __[]___[__]___|==|====[]o++++++++++++++==:_|       
+		  					| ||```     / /I] |;:| \|___.|/`                                    
+                   					 \_|       /_/ |  |__|       Y                                     
+                             `                Rear bipod- |	   `   |    |       / \   -------Bipod                                                 
+                                            			      /     |     ./   \.                            
+								     /      |
+                           					    /       | 
+					      Pressure switch trigger        External battery
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	The diagrams above show the different sides of the Sniper Yagi. Starting with the left side diagram, we see basic core components, alongside side-specific 
+components. The core components are as listed: 
+
+	* Bipod ( Front and Rear )
+	* Scope
+	* External Battery
+	* 2.4 GHz Yagi Antenna
+	* Pressure switch trigger
+	* Frame of the weapon
+
+The bipod of this build keeps the sniper upright and steady for precise aim and positioning. The scope is used to spot the target and to line up the signal to aim 
+directly at the desired device. The external battery of this build was made to take the place of an ammunition magazine, and to be plugged into all systems that require
+power --The Raspberry pi, and the monitor. You can even use the USB hub or battery to charge another device if required or for convienence. As for the antenna, this will
+be mounted to the barrel by lining it up to the top or bottom, and to have an antenna mount on the opposing side, to use two half-circle bars to screw into the mount, 
+holding the antenna in place. However, the front of the antenna is left unsupported, making for a droopy, and most urgently, an unsteady signal shot. This can be easily
+fixed by taking a bare duct tape roll with no tape on it, and sliding it over the antenna AND barrel together to create a tight fiting sleeve so the antenna stays 
+secure. This antenna needs to be secure, because its main purpose is to shoot signal to up to three miles in a very specific direction, directly corresponding to 
+where the antenna is aimed. Just before the antenna on the weapon frame, a base of a tin can can be added to direct all signal to the disired location in extreme cases.
+There are many weapon frames compatible with this build, however during testing, the following frames worked best with the poject build:
+
+	* Barret 50 Caliber rifle ( Shown in above examples, highly reccommended )
+	* M4/AR-15 ( more compact than the Barret but less space is given )
+	* SVD ( Less space, but long build for enough antenna room to fully support length )
+	* any other sniper frame 
+
+Having identified these core components, lets look at the left side specific components. They are as listed:
+
+	* Side-Mounted phone size monitor
+	* Raspberry pi
+
+The components on this side are the heart of this project. The Raspberry Pi is a micro computer, used for portability in this project. This computer will run all 
+the tools and programs required for the project. This includes all of the exploits that will make up the entirety of this concept. The next component is the side-
+mounted monitor that should be around the size of a smartphone. A customized holder for this monitor will be crafted and attached via a hinge connecting the mount
+and weapon frame together, making for a foldable screen to fold out to the side while the sniper is resting on the bipod in ready position to make for easier 
+recognition of what stage of attack the yagi is in based on a quick glance to the fold-out monitor if needed. This monitor will be connected to the pi via an HDMI
+cable to the Raspberry Pi to allow the Pi to use the monitor as a screen to display processes. Enough slack should be given to the cable to allow no tugging or
+stressing of the cable when the monitor is either folded out or in to ensure a stable connection.
+
+Having identified the left side components and understand their use, lets look at the right side specific components. They are as listed:
+
+	* Backend Wifi Dongle
+	* USB hub
+
+The backend wireless dongle will be used to transmit a local signal for connecting to a master access point to establish a working internet connection to the rifle if 
+needed. This will allow for different wireless interfaces to be used during monitor/broadcasting attacks where two interfaces are needed. Next up is the USB hub. This 
+hub will allow for more storage to be used and other exploits developed that are not included in the operating system can be transferred to the system vis USB or by 
+an apt-get install on the system itself.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								           { SOFTWARE }
+Now that hardware has been covered, we will move on to the virtual components of this project. Any base operating system will do, because the current operating 
+system made specifically for this project is still being developed. However, here is a quick list of reccommended operating systems that will work easily with this
+project:
+	* Kali Linux 2.0
+	* BackBox 
+	* Parrot
+	* Backtrack 5
+These operating systems are well-known for being pre-configured for a pentesting environment, and have tools pre-installed on them. Basically, what this Sniper Yagi
+system doesk, is automate attacks for the user for a specifically targeted system or machine. While the OS for this project is still under development, all of these 
+operating systems are compatible with the SYframework. What is the SYframework? SYframework is short for Sniper Yagi Framework. This framework automates pre-installed
+programs and exploits to be launched at the press of a single button when set to a specific target. This target is set by either manually entering the target 
+information required to launch the exploit, or for wireless based attacks, aiming the Sniper Yagi at the specific device. Hence the name, Sniper Yagi, this is 
+purposefully accurate for specific target attacks where your target needs to be singled out.( You may have seen this concept before -- Famous hacker Th3J3573r had a 
+similar concept confinscated by law enforcement due to unethical use and is now kept in the international spy museum on display for anyone interested in viewing. )
+When the sniper is set to the target, the trigger is pulled. This trigger is layered with a pressure pad macro key configured to activate the framework attack vector
+chosen to be used against the target. This means that at the pull of a trigger, a machine could be completely taken over. Now that you have this, you're ready to 
+begin your very own build of this project!
+									   { HARDWARE SETUP }
+
+
+Begin by placing the Yagi antenna on the barrel of your rifle. on top of the barrel will give the most accurate results, but any side will do. Set the mount on the 
+other side of the barrel, and connect the long bolts and bars in place to fasten the antenna onto the barrel. To allow for more stability, take a used up duct tape roll
+and put it on the barrel, over the antenna to hold it down near the front. This will hold it snug in place. If you desire, drill a hole into the weapon where the
+antenna wire begins, and feed the cord through the hole and into the receiver, and out the dust cover this will make for a more compact design, which will also hold 
+the cords in place to ensure they aren't damaged. Next, plug the usb antenna into the raspberry pi and alide the antenna through the yagi bars, and through the tape 
+roll to hold it in place. For extra support, wrap two zip ties around the base of the weapon and around the pi to keep it secure. If the ties secure the pi enough, 
+the second antenna placement is your choice. After the pi is snug in place, take the usb to female antenna converter and plug it in, the ntake the Yagi cord through the 
+dust cover and plug it in. 
+								
+TOTAL HARDWARE LIST:
+- 2.4 GHz yagi antenna
+- USB to antenna converter
+- dipole antenna (any knd, not needed, but used for bridging internet connection to clients)
+- external batttery
+- any Linux/UNIX OS
+- Side-Mounted phone size monitor
+- Any weapon frame that gives flat surface
+- Pressure switch trigger
+- Bipod
+- Scope
+- Raspberry Pi
+- USB Hub (If required) 
+- hinge to mount closeable screen on (if you desire it to be closeable) 
+
+Credits for this project: Daemon.1530
+
+
+
+
+
+
+
+
+
+
+
+
+
+
